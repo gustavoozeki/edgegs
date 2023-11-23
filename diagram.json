@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -81.7, "left": 321.4, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 131.2,
+      "left": -4,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -230.1,
+      "left": 205.8,
+      "attrs": { "temperature": "36.5", "humidity": "14" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": -42, "left": 138.2, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 41.8,
+      "left": 133.55,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:VIN", "lcd1:VDD", "red", [ "h0" ] ],
+    [ "esp:GND.1", "lcd1:GND", "black", [ "v-0.1", "h23.18", "v230.4", "h-455.48", "v-134.4" ] ],
+    [ "lcd1:VCC", "esp:3V3", "red", [ "h-16.57", "v105.7", "h439.27" ] ],
+    [ "esp:D21", "lcd1:SDA", "green", [ "h28.5", "v326", "h-489.6", "v-125" ] ],
+    [ "lcd1:SCL", "esp:D22", "purple", [ "h-28.8", "v96.3", "h460.8", "v-335.7" ] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v19.2", "h240", "v172.8" ] ],
+    [ "dht1:SDA", "esp:D15", "green", [ "h0.1", "v28.8", "h211.2", "v144.2" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v9.6", "h220.8", "v172.9" ] ],
+    [ "esp:GND.2", "led1:C", "black", [ "h0" ] ],
+    [ "r2:1", "esp:D12", "green", [ "h153.6", "v-28.1" ] ],
+    [ "r2:2", "led1:A", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
