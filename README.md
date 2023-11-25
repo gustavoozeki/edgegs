@@ -5,6 +5,8 @@ Vitor Shimizu RM 550390
 
 Vídeo de apresentação: https://www.youtube.com/watch?v=WSmQv1pSn1Q&ab_channel=shimizu
 
+Link do Wokwi: https://wokwi.com/projects/382189744734282753
+
 SafeBeat - Utilizando Iot na saúde 
 
 # O PROBLEMA 
